@@ -1,4 +1,4 @@
 Charon
 ======
 
-Class Composition Heuristics and Admissions Requirements Onlining Node
+Class composition Heuristics and Admissions Requirements Onlining Node

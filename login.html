@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+
+<body>
+<h1>Login</h1>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<form method="POST">
+	<label for="email">Email</label><input name="email" /><br>
+	<label for"password">Password</label><input name="password" type="password" /><br>
+	<input type="submit" name="submit" />
+</form>
+
+{% if error %}
+<p class=error><strong>Error:</strong> {{ error }}
+{% endif %}
+
+</body>
+</html>
